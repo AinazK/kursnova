@@ -2,7 +2,9 @@ import type { FC } from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 
-import ArrowIcon from "../../assets/common/icons/arrow-icon.svg";
+const ArrowIcon =
+  "/wp-content/themes/kursnova-wp-theme/assets/icons/arrow-icon.svg";
+
 import styles from "./BackButton.module.sass";
 
 interface BackButtonProps {

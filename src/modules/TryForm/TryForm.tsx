@@ -8,7 +8,7 @@ import { setIsModalOpen, setIsModalSuccess } from "../../store/slices/uiSlice";
 
 import { InputMask } from "@react-input/mask";
 
-import CloseIcon from "../../assets/close.svg?react";
+const CloseIcon = "/wp-content/themes/kursnova-wp-theme/assets/close.svg";
 
 import styles from "./TryForm.module.sass";
 import { Link } from "react-router-dom";
@@ -54,7 +54,7 @@ export const TryForm: FC<TryFormProps> = ({ className }) => {
         onClick={() => dispatch(setIsModalOpen(false))}
         className={styles.close}
       >
-        <CloseIcon />
+        <img src={CloseIcon} alt="Закрыть" />
       </button>
 
       <div className={styles.line} />
@@ -144,10 +144,12 @@ export const TryForm: FC<TryFormProps> = ({ className }) => {
           <div className={styles.outer}>
             <div className={styles.inner}></div>
           </div>
-          Хочу получать рассылку{" "}
-          <Link to="/ads-consent" className={styles.checkbox__link}>
-            рекламных и информационных сообщений
-          </Link>
+          <div>
+            Хочу получать рассылку{" "}
+            <Link to="/ads-consent" className={styles.checkbox__link}>
+              рекламных и информационных сообщений
+            </Link>
+          </div>
         </label>
 
         <label

@@ -1,10 +1,14 @@
 import type { FC } from "react";
 import clsx from "clsx";
 
-import IphoneQrcode from "../../../assets/common/footer/iphone-qrcode.svg";
-import AndroidQrcode from "../../../assets/common/footer/android-qrcode.svg";
-import AppleLogo from "../../../assets/common/icons/apple-logo.svg";
-import AndroidLogo from "../../../assets/common/icons/android-logo.svg";
+const IphoneQrcode =
+  "/wp-content/themes/kursnova-wp-theme/assets/footer/iphone-qrcode1.svg";
+const AndroidQrcode =
+  "/wp-content/themes/kursnova-wp-theme/assets/footer/android-qrcode1.svg";
+const AppleLogo =
+  "/wp-content/themes/kursnova-wp-theme/assets/icons/apple-logo.svg";
+const AndroidLogo =
+  "/wp-content/themes/kursnova-wp-theme/assets/icons/android-logo.svg";
 
 import styles from "./FooterContactsDesktop.module.sass";
 

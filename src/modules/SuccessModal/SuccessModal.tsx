@@ -3,15 +3,21 @@ import clsx from "clsx";
 import { useAppDispatch } from "../../store/hooks";
 import { setIsModalOpen, setIsModalSuccess } from "../../store/slices/uiSlice";
 
-import CloseIcon from "../../assets/close.svg?react";
-import SuccessImage from "../../assets/success.png";
+const CloseIcon = "/wp-content/themes/kursnova-wp-theme/assets/close.svg";
+const SuccessImage = "/wp-content/themes/kursnova-wp-theme/assets/success.png";
 
-import IphoneQrcode from "../../assets/common/footer/iphone-qrcode.svg";
-import AndroidQrcode from "../../assets/common/footer/android-qrcode.svg";
-import AppleLogo from "../../assets/common/icons/apple-logo.svg";
-import AndroidLogo from "../../assets/common/icons/android-logo.svg";
-import AppleIcon from "../../assets/common/icons/apple-logo.svg?react";
-import GooglePlayIcon from "../../assets/common/icons/googleplay-icon.svg?react";
+const IphoneQrcode =
+  "/wp-content/themes/kursnova-wp-theme/assets/footer/iphone-qrcode1.svg";
+const AndroidQrcode =
+  "/wp-content/themes/kursnova-wp-theme/assets/footer/android-qrcode1.svg";
+const AppleLogo =
+  "/wp-content/themes/kursnova-wp-theme/assets/icons/apple-logo.svg";
+const AndroidLogo =
+  "/wp-content/themes/kursnova-wp-theme/assets/icons/android-logo.svg";
+const AppleIcon =
+  "/wp-content/themes/kursnova-wp-theme/assets/icons/apple-logo.svg";
+const GooglePlayIcon =
+  "/wp-content/themes/kursnova-wp-theme/assets/icons/googleplay-icon.svg";
 
 import styles from "./SuccessModal.module.sass";
 
@@ -26,7 +32,9 @@ export const SuccessModal: FC<SuccessModalProps> = ({ className }) => {
 
   return (
     <div className={clsx(styles.wrapper, className)}>
-      <CloseIcon
+      <img
+        src={CloseIcon}
+        alt="Закрыть"
         className={styles.close}
         onClick={() => {
           dispatch(setIsModalOpen(false));
@@ -71,7 +79,11 @@ export const SuccessModal: FC<SuccessModalProps> = ({ className }) => {
 
       {/* Download button */}
       <button className={styles.downloadButton}>
-        {isIOS ? <AppleIcon /> : <GooglePlayIcon />}
+        {isIOS ? (
+          <img src={AppleIcon} alt="Apple" />
+        ) : (
+          <img src={GooglePlayIcon} alt="Google Play" />
+        )}
         Перейти в {isIOS ? "App Store" : "Google Play"}
       </button>
     </div>

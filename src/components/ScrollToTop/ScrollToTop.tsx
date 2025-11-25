@@ -1,16 +1,19 @@
-import { useLenis } from 'lenis/react'
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLenis } from "lenis/react";
+import { useEffect } from "react";
+import { useLocation, useNavigationType } from "react-router-dom";
 
 export const ScrollToTop = () => {
-	const lenis = useLenis()
-	const { pathname } = useLocation()
+  const lenis = useLenis();
+  const { pathname } = useLocation();
+  const navigationType = useNavigationType();
 
-	useEffect(() => {
-		if (lenis) {
-			lenis.scrollTo(0, { immediate: true })
-		}
-	}, [pathname])
+  useEffect(() => {
+    if (navigationType === "POP") return;
 
-	return null
-}
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    }
+  }, [pathname, navigationType]);
+
+  return null;
+};

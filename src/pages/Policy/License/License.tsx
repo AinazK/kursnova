@@ -8,8 +8,10 @@ import { Container } from "../../../components/Container/Container";
 import { BackButton } from "../../../components/BackButton/BackButton";
 
 import "../policy.sass";
-import LicenseQRCode from "../../../assets/common/footer/license-qrcode.png";
-import LicenseSeal from "../../../assets/common/footer/license-seal.png";
+const LicenseQRCode =
+  "/wp-content/themes/kursnova-wp-theme/assets/common/footer/license-qrcode.png";
+const LicenseSeal =
+  "/wp-content/themes/kursnova-wp-theme/assets/common/footer/license-seal.png";
 
 interface LicenseProps {
   className?: string;

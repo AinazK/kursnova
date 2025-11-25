@@ -7,13 +7,17 @@ import { FooterCard } from "../FooterCard/FooterCard";
 import { FooterContactsMobile } from "../FooterContactsMobile/FooterContactsMobile";
 import { FooterLicense } from "../FooterLicense/FooterLicense";
 
-import Bot from "../../../assets/common/footer/bot.png";
-import GreenBall from "../../../assets/common/footer/green-ball.png";
-import Eurica from "../../../assets/common/footer/eurica.png";
-import Horse from "../../../assets/common/footer/horse.png";
-import GooglePlayIcon from "../../../assets/common/icons/googleplay-icon.svg?react";
-import AppleIcon from "../../../assets/common/icons/apple-logo.svg?react";
-import CardBackground from "../../../assets/common/footer/card-bg-mobile.png";
+const Bot = "/wp-content/themes/kursnova-wp-theme/assets/footer/bot.png";
+const GreenBall =
+  "/wp-content/themes/kursnova-wp-theme/assets/footer/green-ball.png";
+const Eurica = "/wp-content/themes/kursnova-wp-theme/assets/footer/eurica.png";
+const Horse = "/wp-content/themes/kursnova-wp-theme/assets/footer/horse.png";
+// const GooglePlayIcon =
+//   "/wp-content/themes/kursnova-wp-theme/assets/icons/googleplay-icon.svg";
+// const AppleIcon =
+//   "/wp-content/themes/kursnova-wp-theme/assets/icons/apple-logo.svg";
+const CardBackground =
+  "/wp-content/themes/kursnova-wp-theme/assets/footer/card-bg-mobile.png";
 
 import styles from "./MobileFooter.module.sass";
 
@@ -147,7 +151,10 @@ export const MobileFooter: FC<MobileFooterProps> = ({ className }) => {
                 rel="noopener noreferrer"
                 className={styles.downloadButton}
               >
-                <AppleIcon />
+                <img
+                  src="/wp-content/themes/kursnova-wp-theme/assets/icons/apple-logo.svg"
+                  alt="Apple"
+                />
                 Перейти в App Store
               </a>
             ) : (
@@ -157,7 +164,10 @@ export const MobileFooter: FC<MobileFooterProps> = ({ className }) => {
                 rel="noopener noreferrer"
                 className={styles.downloadButton}
               >
-                <GooglePlayIcon />
+                <img
+                  src="/wp-content/themes/kursnova-wp-theme/assets/icons/googleplay-icon.svg"
+                  alt="Google Play"
+                />
                 Перейти в Google Play
               </a>
             )}
