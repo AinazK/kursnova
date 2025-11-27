@@ -1,6 +1,7 @@
 interface ILicenseItem {
   title: string;
   path: string;
+  isExternal?: boolean;
 }
 
 export const LICENSE_ITEMS: ILicenseItem[] = [
@@ -27,5 +28,15 @@ export const LICENSE_ITEMS: ILicenseItem[] = [
   {
     title: "Условия использования файлов cookie",
     path: "/cookie-consent",
+  },
+  {
+    title: "Юридические документы",
+    path: "https://legal.kursnova.ru",
+    isExternal: true,
+  },
+  {
+    title: "Сведения об образовательной организации",
+    path: "https://legal.kursnova.ru/obr_legal",
+    isExternal: true,
   },
 ];
